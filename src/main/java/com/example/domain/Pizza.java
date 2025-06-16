@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
+//Root
 public class Pizza {
     private static final double PROFIT= 1.2D;
     private UUID id;
@@ -12,7 +13,7 @@ public class Pizza {
     private String url;
     private Set<Ingredient> ingredients;
     
-    public Pizza(UUID id, String name, String description, String url, Set<Ingredient> ingredients) {
+    protected Pizza(UUID id, String name, String description, String url, Set<Ingredient> ingredients) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -40,12 +41,15 @@ public class Pizza {
         return url;
     }
     public void addIngedient(Ingredient ingredient){
+        //pizza.addingredient
         ingredients.add(ingredient);
     }
     public void removeIngredient(Ingredient ingredient){
+        //pizza.removeingredient
         ingredients.remove(ingredient);
     }
     public void update(String name, String description, String url){
+        //pizza.update
         this.name = name;
         this.description = description;
         this.url = url;
