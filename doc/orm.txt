@@ -1,0 +1,48 @@
+1. Que es impedance mismatch
+
+Entidad
+    Pizza
+        id
+        name
+        description(string) varchar(50) not null
+        url
+        price->sum(costo ingredients) * 1.2
+        ingredients:[{...},{...}}]
+    Ingredients
+        id
+        name
+        cost
+
+pizza
+ingredient
+pizza_ingredient(n:m)
+
+Patrones:
+    Mapping
+    Repository
+        add(entidad)
+        update(entidad)
+        remove(entidad)
+        entidad get(id)
+
+    EntityManager->DbContext
+    Memoria un proxi nuestra entidad ->Read
+    update->updated
+
+    save(UOW)
+
+    try{
+        open connection
+        beggin transaction
+        insert,update,remove
+        commit transaction
+    }
+    catch{
+        rollback
+    }
+    finally{
+        close connection
+    }
+
+
+modelo anemico:tiene una correspondencia 100 tabla clase

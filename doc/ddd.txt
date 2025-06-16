@@ -1,0 +1,17 @@
+Domain Drive Designer(DDD)
+
+Domain
+    Entidades->Objetos que son iguales si su identicador es igual
+    ValueObject->Objetos que son iguales si todos sus atributos son igulaes
+    Entidad Root->Es la entidad principal que vamos persistir
+    Bounded Conext
+    Exceptions del dominio
+    Eventos del dominio
+    Interface
+        Repositorio (add,update,remove,get)
+    Pizza->ingredients 
+    Pizza
+        update
+        static create   
+        Set<> ingredients
+        Estamos hablando de una composicion
