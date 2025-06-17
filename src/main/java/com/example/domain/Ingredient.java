@@ -2,14 +2,14 @@ package com.example.domain;
 
 import java.util.UUID;
 
+import com.example.core.EntityBase;
+
 //Root
-public class Ingredient {
-    private UUID id;
+public class Ingredient extends EntityBase {
+    
     private String name;
     private double cost;
-    public UUID getId() {
-        return id;
-    }
+    
     public String getName() {
         return name;
     }
@@ -22,7 +22,7 @@ public class Ingredient {
          * la creacccion real del objeto(SI)
          * el mapeo de la bb.dd(No)
          */
-        this.id = id;
+        super(id);
         this.name = name;
         this.cost = cost;
     } 

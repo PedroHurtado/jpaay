@@ -4,17 +4,19 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
+import com.example.core.EntityBase;
+
 //Root
-public class Pizza {
+public class Pizza extends EntityBase {
     private static final double PROFIT= 1.2D;
-    private UUID id;
+    
     private String name;
     private String description;
     private String url;
     private Set<Ingredient> ingredients;
     
     protected Pizza(UUID id, String name, String description, String url, Set<Ingredient> ingredients) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.description = description;
         this.url = url;
@@ -28,9 +30,7 @@ public class Pizza {
     public Set<Ingredient> getIngredients() {
         return new HashSet<>(ingredients);
     }
-    public UUID getId() {
-        return id;
-    }
+    
     public String getName() {
         return name;
     }
