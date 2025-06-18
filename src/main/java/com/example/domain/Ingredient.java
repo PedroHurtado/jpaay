@@ -4,7 +4,9 @@ import java.util.UUID;
 
 import com.example.core.EntityBase;
 
-//Root
+import jakarta.persistence.Entity;
+
+@Entity
 public class Ingredient extends EntityBase {
     
     private String name;

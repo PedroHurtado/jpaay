@@ -6,13 +6,17 @@ import java.util.UUID;
 
 import com.example.core.EntityBase;
 
-//Root
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+
+@Entity
 public class Pizza extends EntityBase {
     private static final double PROFIT= 1.2D;
     
     private String name;
     private String description;
     private String url;
+    @ManyToMany
     private Set<Ingredient> ingredients;
     
     protected Pizza(UUID id, String name, String description, String url, Set<Ingredient> ingredients) {

@@ -5,6 +5,9 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.service.ServiceRegistry;
 
+import com.example.domain.Ingredient;
+import com.example.domain.Pizza;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,7 +29,8 @@ public class HibernateUtil {
                 .applySettings(settings).build();
 
         return new MetadataSources(serviceRegistry)
-                //.addAnnotatedClass(Persona.class)
+                .addAnnotatedClass(Ingredient.class)
+                .addAnnotatedClass(Pizza.class)
                 .buildMetadata()
                 .buildSessionFactory();
     }
