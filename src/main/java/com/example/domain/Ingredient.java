@@ -18,6 +18,9 @@ public class Ingredient extends EntityBase {
     public double getCost() {
         return cost;
     }
+    protected Ingredient(){
+        super();
+    }
     protected Ingredient(UUID id, String name, double cost) {
         //ingredient.new
         /*

@@ -19,6 +19,9 @@ public class Pizza extends EntityBase {
     @ManyToMany
     private Set<Ingredient> ingredients;
     
+    protected Pizza(){
+        super();
+    }
     protected Pizza(UUID id, String name, String description, String url, Set<Ingredient> ingredients) {
         super(id);
         this.name = name;
